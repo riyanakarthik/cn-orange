@@ -124,7 +124,7 @@ Expected:
 
 ### Scenario 4: Flow Table Inspection
 ```
-sudo ovs-ofctl dump-flows s1
+sudo ovs-ofctl -O OpenFlow10 show s1
 ```
 
 Expected:
@@ -190,6 +190,6 @@ Expected:
 
 ## 11. Author
 
-Name: [Your Name]  
+Name: Riyana Karthik
 Course: Computer Networks / SDN Lab  
 Project: SDN Learning Switch
