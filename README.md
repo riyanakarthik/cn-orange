@@ -81,69 +81,53 @@ net
 ## 6. Test Scenarios
 
 ### Scenario 1: Normal Communication
-```
-pingall
-```
 
 Expected:
 - Successful communication
 - 0% packet loss
 
-📸 Screenshot:
+Screenshot:
 ![Ping Success](./1.png)
 
 ---
 
 ### Scenario 2: Failure Simulation
-```
-h1 ifconfig h1-eth0 down
-pingall
-```
 
 Expected:
 - Communication failure
 - 100% packet loss
 
-📸 Screenshot:
+Screenshot:
 ![Ping Failure](./2.png)
 
 ---
 
 ### Scenario 3: Bandwidth Test (iperf)
-```
-iperf h1 h2
-```
 
 Expected:
 - TCP bandwidth output
 
-📸 Screenshot:
+Screenshot:
 ![iperf](./3.png)
 
 ---
 
-### Scenario 4: Flow Table Inspection
-```
-sudo ovs-ofctl -O OpenFlow10 show s1
-```
+### Scenario 4: Switch Verification
 
 Expected:
 - Flow rules showing MAC-based forwarding
 
-📸 Screenshot:
+Screenshot:
 ![Flow Table](./4.png)
 
 ---
 
-### Scenario 5: Switch Information
-```
-sudo ovs-ofctl -O OpenFlow10 show s1
-```
+### Scenario 5: Topology verification
 
 Expected:
 - Port and switch details
 
-📸 Screenshot:
+Screenshot:
 ![Switch Info](./5.png)
 
 ---
